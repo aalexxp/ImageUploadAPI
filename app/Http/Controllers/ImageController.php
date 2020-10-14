@@ -65,6 +65,7 @@ class ImageController extends Controller
             $response['status'] = 'success';
             $response['image'] = $image;
         } catch (\Exception $e) {
+            $response['error_message'] = $e->getMessage();
         }
 
         return json_encode($response);
