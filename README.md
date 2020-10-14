@@ -1,3 +1,15 @@
+##Installation
+Copy the .env.example file to a new file named .env.
+
+Fill database and aws credentials in .env
+
+Make commands
+
+`composer install`
+
+`npm install`
+
+
 ## Routes:
 `/api/upload` - image upload.
 
