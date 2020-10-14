@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('/api/upload', 'App\Http\Controllers\ImageController@apiUpload')->name('apiupload');
+Route::get('/images/{user_id}', 'App\Http\Controllers\ImageController@apiGetImages')->name('apigetimages');
+Route::get('/images/{user_id}/{image_id}', 'App\Http\Controllers\ImageController@apiGetImage')->name('apigetimage');
