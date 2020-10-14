@@ -44,7 +44,7 @@ class ImageController extends Controller
             $this->image->create($request->only('path', 'title', 'size', 'user_id'));
             return back()->with('success', 'Image Successfully Saved');
         } catch (\Exception $e) {
-            return $e->getMessage();
+            return back()->with('error', $e->getMessage());
         }
     }
 

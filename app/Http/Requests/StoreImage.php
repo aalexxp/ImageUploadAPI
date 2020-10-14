@@ -26,7 +26,7 @@ class StoreImage extends FormRequest
         return [
             'user_id' => 'required|max:250',
             'title' => 'required|max:250',
-            'file' => 'required|image|max:2000'
+            'file' => 'required|image|max:2000|mimes:jpeg,png'
         ];
     }
 }

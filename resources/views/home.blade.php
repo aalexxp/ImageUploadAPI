@@ -17,6 +17,7 @@
                             <div class="form-group">
                                 <label for="title">User ID</label>
                                 <input type="number" name="user_id" id="user_id" class="form-control"/>
+                                <span class="help-block text-danger">{{$errors->first('user_id')}}</span>
                             </div>
                             <div class="form-group">
                                 <label for="title">Title</label>
@@ -32,6 +33,12 @@
                     <div class="alert alert-success alert-dismissable">
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                         {{session('success')}}
+                    </div>
+                @endif
+                @if (session('error'))
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        {{session('error')}}
                     </div>
                 @endif
             </div>
